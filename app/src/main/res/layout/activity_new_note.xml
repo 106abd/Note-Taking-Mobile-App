@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewNote">
+
+    <!-- Screen Title Stack -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/overlay_toolbar"
+        />
+
+    <!-- Note Title Text Bar -->
+    <EditText
+        android:id="@+id/noteTitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+
+        android:hint="@string/new_note_title_text_bar_hint"
+
+        android:inputType="text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Note Subtitle Text Bar -->
+    <EditText
+        android:id="@+id/noteSubtitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+
+        android:hint="@string/new_note_subtitle_text_bar_hint"
+
+        android:inputType="text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitle" />
+
+    <!-- Note Text Box -->
+    <EditText
+        android:id="@+id/noteTextBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="200dp"
+
+        android:ems="10"
+        android:gravity="start|top"
+
+        android:hint="@string/new_note_text_box_hint"
+
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteSubtitle" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDisplay"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="68dp"
+
+        android:src="@drawable/baseline_add_photo_alternate_24"
+        android:scaleType="fitCenter"
+        android:paddingLeft="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/newNoteBackButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
+
+        android:text="@string/new_note_back_button"
+
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <!-- Color Choices -->
+    <RadioGroup
+        android:id="@+id/noteColourChoices"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/colourChoice1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+
+            android:drawableStart="@drawable/radio_button_color_choice_1"
+            android:paddingLeft="12dp"
+            />
+
+        <RadioButton
+            android:id="@+id/colourChoice2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+
+            android:drawableStart="@drawable/radio_button_color_choice_2"
+            android:paddingLeft="12dp"
+            />
+
+        <RadioButton
+            android:id="@+id/colourChoice3"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+
+            android:drawableStart="@drawable/radio_button_color_choice_3"
+            android:paddingLeft="12dp"
+            />
+
+    </RadioGroup>
+
+    <!-- Done Button -->
+    <Button
+        android:id="@+id/newNoteDoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="@string/new_note_done_button"
+
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

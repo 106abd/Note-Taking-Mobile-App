@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <!-- Screen Title Stack -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/overlay_toolbar"/>
+
+    <!-- Search Bar -->
+    <android.widget.SearchView
+        android:id="@+id/searchNotesBar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+
+        android:background="#20673AB7"
+
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/note_search_bar_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Saved Notes List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/savedNotesList"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchNotesBar"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Create Note Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createNewNoteButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:clickable="true"
+
+        android:src="@android:drawable/ic_input_add"
+
+        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listedNote"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorChoice1"
+    >
+
+    <!-- Listed Note Title -->
+    <TextView
+        android:id="@+id/listedNoteTitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_note_title_text_bar_hint"
+        android:textSize="24sp"
+        android:paddingBottom="5dp"
+
+        tools:ignore="MissingConstraints"
+        />
+
+
+    <!-- Listed Note Subtitle -->
+    <TextView
+        android:id="@+id/listedNoteSubtitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/new_note_subtitle_text_bar_hint"
+        android:textSize="20sp"
+
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/listedNoteTitle"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

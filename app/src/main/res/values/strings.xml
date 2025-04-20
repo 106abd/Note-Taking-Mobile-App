@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NoteMe</string>
+    <string name="loading_app_message">Loading Application…</string>
+    <string name="new_note_back_button">Back</string>
+    <string name="new_note_done_button">Done</string>
+    <string name="new_note_text_box_hint">Enter Note</string>
+    <string name="new_note_subtitle_text_bar_hint">Subtitle</string>
+    <string name="new_note_title_text_bar_hint">Title</string>
+    <string name="note_search_bar_hint">Search Notes</string>
+
+</resources>
